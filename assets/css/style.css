@@ -1,0 +1,689 @@
+/* 
+    1. Base css 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(35, 35, 35);
+  width: 100%;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 
+    2. Login css 
+*/
+
+.login_section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding-top: 120px;
+}
+
+.login_section::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-image: url("../img/auth-decoration.svg");
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.login_section::before {
+  position: absolute;
+  content: url("../img/auth-arrow.svg");
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login_section .left_side_area h6 {
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(214, 150, 103);
+  letter-spacing: 0.32rem;
+  margin-bottom: 15px;
+}
+
+.login_section .left_side_area h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.login_section .left_side_area ul li {
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.login_section .left_side_area p {
+  font-size: 17px;
+  font-weight: 300;
+  color: #fff;
+  word-spacing: 0.1rem;
+  margin-top: 20px;
+}
+
+.login_section .right_side_area {
+  padding: 0 90px;
+}
+
+.login_section .right_side_area .top_text h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.login_section .right_side_area .top_text p {
+  font-size: 17px;
+  font-weight: 300;
+  color: rgb(153, 153, 153);
+  word-spacing: 0.1rem;
+  margin-bottom: 25px;
+}
+
+.login_section .right_side_area form .form-label {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.login_section .right_side_area form .form-control {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  border: 1px solid rgb(35, 35, 35);
+  border-radius: 7px;
+  color: white;
+  padding: 17px;
+  background: rgb(50, 50, 50);
+}
+
+.login_section .right_side_area form .form-control:focus {
+  box-shadow: none;
+}
+
+.login_section .right_side_area form .form-control::placeholder {
+  color: #fff;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.login_section .right_side_area form .login_btn {
+  font-size: 14px;
+  font-weight: 400;
+  background-color: rgb(25, 93, 81);
+  padding: 13px;
+  border-radius: 0.5rem;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.login_section .right_side_area form .login_btn:hover {
+  background: rgb(22, 83, 72);
+}
+
+.login_section .right_side_area .bottom_text p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(153, 153, 153);
+  letter-spacing: 0.09rem;
+  word-spacing: 0.1rem;
+}
+
+.login_section .right_side_area .bottom_text p a {
+  color: #fff;
+}
+
+/* Media Query */
+
+@media (max-width: 1199px) {
+  .login_section .right_side_area {
+    padding: 0 0 0 60px;
+  }
+}
+
+@media (max-width: 991px) {
+  .login_section::before {
+    display: none;
+  }
+
+  .login_section .right_side_area {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .login_section {
+    height: auto;
+    padding: 120px 0 30px 0;
+  }
+
+  .login_section::after {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .login_section .right_side_area .top_text h2 {
+    font-size: 28px;
+  }
+
+  .login_section .right_side_area .top_text p {
+    font-size: 16px;
+  }
+
+  .login_section .right_side_area form .form-control {
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 12px;
+  }
+
+  .login_section .right_side_area form .login_btn {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .login_section .right_side_area .bottom_text p {
+    font-size: 14px;
+  }
+}
+
+/* 
+    3. Header Section css 
+*/
+
+.header {
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.header .navbar .navbar-toggler {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #fff;
+}
+
+.header .navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.header .navbar .offcanvas {
+  border: none;
+  background: rgb(35, 35, 35);
+}
+
+.header .navbar .offcanvas button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.header .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.header
+  .navbar
+  .offcanvas
+  .offcanvas-body
+  .navbar-nav
+  .nav-item
+  .nav-link.active,
+.header
+  .navbar
+  .offcanvas
+  .offcanvas-body
+  .navbar-nav
+  .nav-item
+  .nav-link:hover {
+  color: rgb(214, 150, 103);
+}
+
+/* Media Query */
+
+@media (max-width:575px) {
+    .header {
+        padding: 15px 0;
+    }
+    .header .navbar .navbar-brand img{
+        width: 80px;
+    }
+    
+}
+
+/* 
+    4. Footer css 
+*/
+
+.footer {
+  background-color: rgb(35, 35, 35);
+}
+
+.footer .top_img img {
+  height: 70px;
+  object-fit: cover;
+}
+
+.footer .footer_links {
+  padding: 40px 0 20px 0;
+}
+
+.footer .copyright_text {
+  padding-bottom: 30px;
+}
+
+.footer .footer_links .right_side nav ul li,
+.footer .copyright_text .right_side nav ul li {
+  margin-left: 20px;
+}
+
+.footer .footer_links .right_side nav ul li a,
+.footer .copyright_text .right_side nav ul li a,
+.footer .footer_links .right_side p {
+  font-size: 16px;
+  color: rgb(164, 164, 164);
+  transition: all 0.5s ease;
+}
+
+.footer .footer_links .right_side nav ul li a:hover,
+.footer .copyright_text .right_side nav ul li a:hover {
+  color: #fff;
+}
+
+.footer .copyright_text .left_side p {
+  font-size: 16px;
+  color: rgb(164, 164, 164);
+}
+
+/* Media Query */
+
+@media (max-width: 991px) {
+  .footer .footer_links {
+    padding: 25px 0 25px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer .footer_links .left_side {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer .footer_links .right_side {
+    text-align: center !important;
+  }
+}
+
+/* 
+    5. Contact Us Section css 
+*/
+
+.contact_us_section {
+  padding: 200px 0 70px 0;
+  position: relative;
+}
+
+.contact_us_section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  background-color: #2b2b2b;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.contact_us_section .contact_left_side_area h6 {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgb(214, 150, 103);
+  text-transform: uppercase;
+  letter-spacing: 0.32rem;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contact_us_section .contact_left_side_area h6::before {
+  top: -2.25rem;
+  left: -2.8125rem;
+  content: url("../img/contact-decoration.svg");
+  width: 5.625rem;
+  height: 5.625rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.contact_us_section .contact_left_side_area h1 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.contact_us_section .contact_left_side_area h1 span {
+  color: rgb(214, 150, 103);
+}
+
+.contact_us_section .contact_left_side_area p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.09rem;
+  word-spacing: 0.1rem;
+}
+
+.contact_us_section .contact_right_side_area {
+  padding: 60px 50px;
+  background: rgb(50, 50, 50);
+  border-radius: 0.5rem;
+}
+
+.contact_us_section .contact_right_side_area form h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact_us_section .contact_right_side_area form .form-label {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.contact_us_section .contact_right_side_area form .form-control {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  border: 1px solid rgb(35, 35, 35);
+  border-radius: 7px;
+  padding: 17px;
+  background: rgb(43, 43, 43);
+}
+
+.contact_us_section .contact_right_side_area form .form-control:focus {
+  box-shadow: none;
+}
+
+.contact_us_section .contact_right_side_area form .form-control::placeholder {
+  color: #fff;
+}
+
+.contact_us_section .contact_right_side_area form .submit_btn {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background-color: rgb(25, 93, 81);
+  border: none;
+  padding: 13px 22px;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+}
+
+.contact_us_section .contact_right_side_area form .submit_btn:hover {
+  background-color: rgb(22, 83, 72);
+}
+
+/* Media Query */
+
+@media (max-width: 991px) {
+  .contact_us_section {
+    padding: 170px 0 50px 0;
+  }
+
+  .contact_us_section .contact_left_side_area {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact_us_section {
+    padding: 170px 0 40px 0;
+  }
+
+  .contact_us_section .contact_right_side_area {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact_us_section .contact_left_side_area h1 {
+    font-size: 35px;
+  }
+
+  .contact_us_section .contact_right_side_area form .form-control {
+    font-size: 13px;
+    padding: 13px;
+  }
+
+  .contact_us_section .contact_right_side_area form .submit_btn {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+}
+
+/* 
+    6. Register your complain section css 
+*/
+
+.register_youtr_complain_section {
+  padding: 70px 0;
+}
+
+.register_youtr_complain_section .top_text h2 {
+  color: rgb(214, 150, 103);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.register_youtr_complain_section .complain_box {
+  background: rgb(50, 50, 50);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register_youtr_complain_section .complain_box .text {
+  margin-top: 10px;
+}
+
+.register_youtr_complain_section .complain_box .text p {
+  color: rgb(214, 150, 103);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  text-transform: capitalize;
+}
+
+.register_youtr_complain_section .complain_box .text h6 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.06rem;
+  text-transform: capitalize;
+}
+
+/* Media Query */
+
+@media (max-width: 991px) {
+  .register_youtr_complain_section {
+    padding: 50px 0 30px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .register_youtr_complain_section {
+    padding: 30px 0;
+  }
+}
+
+/* 
+    7. About us section css 
+*/
+
+.about_us_section {
+  padding-top: 170px;
+}
+
+.about_us_section .about_us_left_side img {
+  border-radius: 20px;
+}
+
+.about_us_section .about_us_right_side h5 {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgb(214, 150, 103);
+  text-transform: uppercase;
+  letter-spacing: 0.32rem;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.about_us_section .about_us_right_side p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  word-spacing: 0.1rem;
+}
+
+/* Media Query */
+
+@media (max-width: 991px) {
+  .about_us_section .about_us_left_side {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .about_us_section .about_us_left_side img {
+    max-height: 350px;
+    width: auto;
+  }
+
+  .about_us_section .about_us_right_side {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+    .about_us_section {
+        padding-top: 150px;
+    }
+  .about_us_section .about_us_left_side {
+    margin-bottom: 30px;
+  }
+  .about_us_section .about_us_right_side p {
+    font-size: 15px;
+  }
+
+  .about_us_section .about_us_left_side img {
+    max-height: 300px;
+  }
+}
+
+/* 
+    8. Service section css 
+*/
+
+.service_section {
+  padding: 0 0 50px 0;
+}
+
+.service_section .top_text h2 {
+  color: rgb(214, 150, 103);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.service_section .service_area_box {
+  background: rgb(50, 50, 50);
+  padding: 13px;
+  margin-bottom: 30px;
+}
+
+.service_section .service_area_box .bottom_text h5 {
+  color: rgb(214, 150, 103);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+  text-transform: capitalize;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.service_section .service_area_box .bottom_text p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+
+/* Media Query */
+
+@media (max-width: 991px) {
+  .service_section {
+    padding: 0 0 30px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .service_section .service_area_box .top_img,
+  .service_section .service_area_box .bottom_text {
+    text-align: center;
+  }
+}
